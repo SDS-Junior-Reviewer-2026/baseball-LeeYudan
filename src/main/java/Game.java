@@ -1,11 +1,16 @@
 public class Game {
     public void guess(String guessNumber) {
         if(guessNumber==null){
-            throw new IllegalArgumentException("You must enter a number");
+            throw new IllegalArgumentException("You must enter");
         }
 
         if(guessNumber.length() !=3){
             throw new IllegalArgumentException("You must enter THREE number");
+        }
+        for(char number:guessNumber.toCharArray()){
+            if(number<'0'||number>'9'){
+                throw new IllegalArgumentException("You must enter a number");
+            }
         }
     }
 }
