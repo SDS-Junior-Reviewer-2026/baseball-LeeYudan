@@ -12,5 +12,12 @@ public class Game {
                 throw new IllegalArgumentException("You must enter a number");
             }
         }
+
+        if(guessNumber.charAt(0)== guessNumber.charAt(1)||
+        guessNumber.charAt(0)==guessNumber.charAt(2)||
+        guessNumber.charAt(1)==guessNumber.charAt(2)){
+            throw new IllegalArgumentException("You must not enter same number");
+        }
+
     }
 }
